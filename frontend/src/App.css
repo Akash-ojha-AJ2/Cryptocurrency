@@ -1,0 +1,139 @@
+/* BinanceLiveChart.css */
+
+:root {
+  --main-bg: #f4f6f8;
+  --card-bg: #ffffff;
+  --accent: #00c9a7;
+  --title-color: #212529;
+  --text-color: #495057;
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  padding-top: 70px; /* Add this line */
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--main-bg);
+}
+
+
+
+
+.live-chart-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  background: linear-gradient(135deg, #e3fdfd 0%, #ffe6fa 100%);
+}
+
+.live-chart-box {
+  background-color: var(--card-bg);
+  padding: 2rem;
+  border-radius: 1.5rem;
+  box-shadow: var(--shadow);
+  width: 100%;
+  max-width: 900px;
+  transition: transform 0.3s ease;
+}
+
+.live-chart-box:hover {
+  transform: scale(1.01);
+}
+
+.live-chart-title {
+  font-size: 1.8rem;
+  color: var(--title-color);
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.live-price {
+  font-size: 1.3rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--accent);
+  font-weight: bold;
+}
+
+.chart-container {
+  height: 450px;
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  background: #fefefe;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .live-chart-box {
+    padding: 1rem;
+    border-radius: 1rem;
+  }
+
+  .live-chart-title {
+    font-size: 1.4rem;
+  }
+
+  .live-price {
+    font-size: 1.1rem;
+  }
+
+  .chart-container {
+    height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .live-chart-title {
+    font-size: 1.2rem;
+  }
+
+  .live-price {
+    font-size: 1rem;
+  }
+}
+
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 2rem;
+  background-color: #1a1a1a;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.navbar-logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.navbar-links li {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-links li a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #ccc;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar-links li.active a,
+.navbar-links li a:hover {
+  color: #00c9a7;
+}
